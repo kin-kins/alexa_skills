@@ -86,6 +86,24 @@ const handlers = {
         this.response.speak("Features the hardware components required to make the drones");
         this.emit(':responseReady');
     },
+        'Kitchen': function ()
+    {
+   
+        this.response.speak("The kitchen is on the other end of the hall ");
+        this.response.speak("You can have snack and beverages ");
+        this.response.speak("cofee machine is available for use");
+        this.emit(':responseReady');
+        
+    },
+      'Washroom': function ()
+    {
+   
+        this.response.speak("There are two washrooms available");
+        this.response.speak("one is on the left of the kitchen ");
+        this.response.speak("Second is in the soldering and testing lab");
+        this.emit(':responseReady');
+        
+    },
     'EquipmentsLocation': function () 
     {
    var slot = this.event.request.intent.slots.equipment.value;
@@ -100,6 +118,7 @@ const handlers = {
         this.emit(':responseReady');
        }
     },
+
     'AMAZON.HelpIntent': function ()
     {
         const speechOutput = HELP_MESSAGE;
