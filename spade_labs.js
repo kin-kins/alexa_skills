@@ -19,9 +19,9 @@ const Alexa = require('alexa-sdk');
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
 const APP_ID = 'amzn1.ask.skill.32a278f9-8a64-4d57-8e7b-ef2774b1a8ac';
 
-const SKILL_NAME = 'Space Facts';
+const SKILL_NAME = 'Spade Labs';
 const GET_FACT_MESSAGE = "Here's your fact: ";
-const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
+const HELP_MESSAGE = 'You can ask spade labs for any details about the maker space';
 const HELP_REPROMPT = 'What can I help you with?';
 const STOP_MESSAGE = 'Goodbye!';
 
@@ -45,7 +45,7 @@ const handlers = {
         this.response.speak(data);
         this.emit(':responseReady');
     },
-    'introduction': function ()
+    'IntroductionToMakerSpace': function ()
     {
    
         this.response.speak("Welcome to Maker's Space");
@@ -55,7 +55,37 @@ const handlers = {
         this.response.speak("You can Ask details of each room to know more details");
         this.emit(':responseReady');
     },
-    
+    'GenralDevelopmentLab': function ()
+    {
+   
+        this.response.speak("The General lab");
+        this.response.speak("The centre hall is Genral Development Lab");
+        this.response.speak("Its equipped with Systems and Raspberry pi");
+        this.response.speak("All the systems are connected with each other ");
+        this.response.speak("Even the printers are connected directly with raspberry pi");
+        this.response.speak("Once can mirror their system screen to others using V N C");
+        this.emit(':responseReady');
+    },
+        'TestingAndSolderingLab': function ()
+    {
+   
+        this.response.speak("The testing and Soldering Lab");
+        this.response.speak("Its euipped with genuine soldering Rods");
+        this.response.speak("All materials required for the soldering and desoldering are available on the table");
+        this.response.speak("Its equipped with dedicated table and tools for debugging robots");
+        this.response.speak("You can also test line follower and table top robot in the same roomzz");
+        this.emit(':responseReady');
+    },
+        'AdvanceRoboticsAndComputingLab': function ()
+    {
+   
+        this.response.speak("The advance robotics and soldering lab");
+        this.response.speak("Its euipped with high configuration laptops");
+        this.response.speak("The systems has all the development tool preinstalled and configured");
+        this.response.speak("Drone Making ");
+        this.response.speak("Features the hardware components required to make the drones");
+        this.emit(':responseReady');
+    },
     'EquipmentsLocation': function () 
     {
    var slot = this.event.request.intent.slots.equipment.value;
