@@ -45,6 +45,17 @@ const handlers = {
         this.response.speak(data);
         this.emit(':responseReady');
     },
+    'introduction': function ()
+    {
+   
+        this.response.speak("Welcome to Maker's Space");
+        this.response.speak("The centre hall is Genral Development Lab");
+        this.response.speak("Testing and soldering room is used for soldering equipments and debugging them");
+        this.response.speak("Advance computing and robotics lab has dedicated laptops and drones");
+        this.response.speak("You can Ask details of each room to know more details");
+        this.emit(':responseReady');
+    },
+    
     'EquipmentsLocation': function () 
     {
    var slot = this.event.request.intent.slots.equipment.value;
