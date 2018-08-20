@@ -37,7 +37,7 @@ const data =  'tanvi is bakchodniiii'
 const handlers = {
     'LaunchRequest': function () 
     {
-        this.emit('GetNewFactIntent');
+        this.emit('IntroductionToMakerSpace');
     },
     'GetNewFactIntent': function ()
     {
@@ -48,38 +48,35 @@ const handlers = {
     'IntroductionToMakerSpace': function ()
     {
    
-        this.response.speak("Welcome to Maker's Space");
+        this.response.speak("Welcome to Maker's Space. The centre hall is Genral Development Lab. Testing and soldering room is used for soldering equipments and debugging them. Advance computing and robotics lab has dedicated laptops and drones. You can Ask details of each room to know more details");
+        this.emit(':responseReady');
         this.response.speak("The centre hall is Genral Development Lab");
         this.response.speak("Testing and soldering room is used for soldering equipments and debugging them");
         this.response.speak("Advance computing and robotics lab has dedicated laptops and drones");
         this.response.speak("You can Ask details of each room to know more details");
-        this.emit(':responseReady');
+        
     },
     'GenralDevelopmentLab': function ()
     {
    
-        this.response.speak("The General lab");
-        this.response.speak("The centre hall is Genral Development Lab");
-        this.response.speak("Its equipped with Systems and Raspberry pi");
-        this.response.speak("All the systems are connected with each other ");
-        this.response.speak("Even the printers are connected directly with raspberry pi");
-        this.response.speak("Once can mirror their system screen to others using V N C");
+        this.response.speak("The General lab. The centre hall is Genral Development Lab. Its equipped with Systems and Raspberry pi. All the systems are connected with each other. Even the printers are connected directly with raspberry pi. once can mirror their system screen to others using V N C");
         this.emit(':responseReady');
     },
         'TestingAndSolderingLab': function ()
     {
    
-        this.response.speak("The testing and Soldering Lab");
-        this.response.speak("Its euipped with genuine soldering Rods");
+        this.response.speak("The testing and Soldering Lab. Its euipped with genuine soldering Rods. All materials required for the soldering and desoldering are available on the table. Its equipped with dedicated table and tools for debugging robots. You can also test line follower and table top robot in the same room");
+        this.emit(':responseReady');
         this.response.speak("All materials required for the soldering and desoldering are available on the table");
         this.response.speak("Its equipped with dedicated table and tools for debugging robots");
-        this.response.speak("You can also test line follower and table top robot in the same roomzz");
-        this.emit(':responseReady');
+        this.response.speak("You can also test line follower and table top robot in the same room");
+        
     },
         'AdvanceRoboticsAndComputingLab': function ()
     {
    
-        this.response.speak("The advance robotics and soldering lab");
+        this.response.speak("The advance robotics and soldering lab. Its euipped with high configuration laptops. The systems has all the development tool preinstalled and configured. Drone Making. Features the hardware components required to make the drones ");
+        this.emit(':responseReady');
         this.response.speak("Its euipped with high configuration laptops");
         this.response.speak("The systems has all the development tool preinstalled and configured");
         this.response.speak("Drone Making ");
@@ -89,19 +86,19 @@ const handlers = {
         'Kitchen': function ()
     {
    
-        this.response.speak("The kitchen is on the other end of the hall ");
+        this.response.speak("The kitchen is on the other end of the hall. You can have snack and beverages. cofee machine is available for use.");
+        this.emit(':responseReady');
         this.response.speak("You can have snack and beverages ");
         this.response.speak("cofee machine is available for use");
-        this.emit(':responseReady');
+        
         
     },
       'Washroom': function ()
     {
    
-        this.response.speak("There are two washrooms available");
-        this.response.speak("one is on the left of the kitchen ");
-        this.response.speak("Second is in the soldering and testing lab");
+        this.response.speak("There are two washrooms available. one is on the left of the kitchen. Second is in the soldering and testing lab")
         this.emit(':responseReady');
+       
         
     },
     'EquipmentsLocation': function () 
