@@ -9,7 +9,7 @@
  **/
 
 'use strict';
-const Alexa = require('alexa-sdk'); 
+const Alexa = require('alexa-sdk');  
 
 //=========================================================================================================================================
 //TODO: The items below this comment need your attention.
