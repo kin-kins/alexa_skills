@@ -21,7 +21,7 @@ const APP_ID = 'amzn1.ask.skill.32a278f9-8a64-4d57-8e7b-ef2774b1a8ac';
 
 const SKILL_NAME = 'Spade Labs';
 const GET_FACT_MESSAGE = "Here's your fact: ";
-const HELP_MESSAGE = 'You can ask spade labs for any details about the maker space';
+const HELP_MESSAGE = 'You can ask spade labs for any details about the maker space such as where is the washroom. where can u find coffee. Describe the testing lab. Describe the hall or Describe the computation lab.';
 const HELP_REPROMPT = 'What can I help you with?';
 const STOP_MESSAGE = 'Goodbye!';
 
@@ -37,14 +37,13 @@ const data =  'tanvi is bakchodniiii'
 const handlers = {
     'LaunchRequest': function () 
     {
-        this.emit('IntroductionToMakerSpace');
+        this.emit('AMAZON.HelpIntent');
     },
-    'GetNewFactIntent': function ()
+     'SessionEndedRequest': function () 
     {
-   
-        this.response.speak(data);
-        this.emit(':responseReady');
+        this.emit('AMAZON.StopIntent');
     },
+ 
     'IntroductionToMakerSpace': function ()
     {
    
@@ -109,7 +108,12 @@ const handlers = {
         this.response.speak("the "+slot+" is in drawer D1");
         this.emit(':responseReady');
        }
-       if((slot=='ir sensors')||(slot=='motion sensor')||(slot=='arduino'))
+       if((slot=='ir sensors')||(slot=='motion sensor')||(slot=='arduino')||(slot=='jumper wires'))
+       { 
+        this.response.speak("the "+slot+" is in drawer D2");
+        this.emit(':responseReady');
+       }
+         if((slot=='raspberry pi')||(slot=='node mcu')||(slot=='screw driver'))
        { 
         this.response.speak("the "+slot+" is in drawer D2");
         this.emit(':responseReady');
@@ -134,6 +138,7 @@ const handlers = {
         this.response.speak(STOP_MESSAGE);
         this.emit(':responseReady');
     },
+    
 };
 
 exports.handler = function (event, context, callback) {
