@@ -103,7 +103,7 @@ const handlers = {
     'EquipmentsLocation': function () 
     {
    var slot = this.event.request.intent.slots.equipment.value;
-    if((slot=='soldering rod')||(slot=='wire cutter')||(slot=='double side tape')||(slot=='insulation tape'))
+    if((slot=='soldering rod')||(slot=='wire cutter')||(slot=='double sided tape')||(slot=='insulation tape'))
        { 
         this.response.speak("the "+slot+" is in drawer D1");
         this.emit(':responseReady');
@@ -147,4 +147,3 @@ exports.handler = function (event, context, callback) {
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
- 
