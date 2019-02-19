@@ -1,6 +1,7 @@
 # Alexa Skills
 **Adding presistence, session recall, basic conversations with alexa**
-This repo has been visited [![HitCount](http://hits.dwyl.io/kin-kins/alexa_skills.svg)](http://hits.dwyl.io/kin-kins/alexa_skills) no of times !
+
+* This repo has been visited [![HitCount](http://hits.dwyl.io/kin-kins/alexa_skills.svg)](http://hits.dwyl.io/kin-kins/alexa_skills) no of times !
 
 
 ![alt text](https://github.com/kin-kins/alexa_skills/blob/master/alexaBar.png "Timeline")
