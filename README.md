@@ -1,5 +1,5 @@
 # Alexa Skills
-**Adding presistence, session recall, basic conversations with alexa
+**Adding presistence, session recall, basic conversations with alexa**
 ![alt text](https://github.com/kin-kins/alexa_skills/blob/master/alexaBar.png "Timeline")
 
 # Introduction To Alexa Skills
